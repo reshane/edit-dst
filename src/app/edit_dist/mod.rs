@@ -10,6 +10,12 @@ pub fn edit_dist(a: &String, b: &String) -> usize {
         a.len() + 1,
         b.len() + 1
     );
+    for i in 0..(a.len() + 1) {
+        *mem.index_mut(i, 0) = i;
+    }
+    for j in 0..(b.len() + 1) {
+        *mem.index_mut(0, j) = j;
+    }
     for i in 1..(a.len() + 1) {
         for j in 1..(b.len() + 1) {
             if a.chars().nth(i-1) == b.chars().nth(j-1) {
