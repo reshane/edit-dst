@@ -71,6 +71,7 @@ impl Component for App {
                         {self.get_dist()}
                     </div>
                 </div>
+                {"Shane Was Here"}
             </main>
         }
     }
